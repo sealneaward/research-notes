@@ -79,3 +79,34 @@
 #### Future Work
 - Now that deep-learning research has exploded in the last 4 years, would it be possible to extend this research and use an LSTM model to approach predicting rebound locations and ball trajectories based on the full (or partial) directory of the initial shot?
 - It would be interesting to look into how define boxing out and how boxing out directly affects rebounding probabilities.
+
+### [The Three Dimensions of Rebounding](http://www.sloansportsconference.com/wp-content/uploads/2014/02/2014_SSAC_The-Three-Dimensions-Of-Rebounding.pdf)
+
+#### Problem Statement
+- Rebounding statistics have been very one dimensional before the introduction of SportVU data. The only tracked metrics were the type of rebound and to which player got the rebound.
+- Using SportVU data, researchers give insight into the timeline of a rebound, develop metrics for the rebound timeline, and use the metrics to evaluate a player's true rebounding ability.
+
+#### Short Summary
+- Crashing the boards and boxing out players is part of positioning to get into a location on the floor to increase to likelihood of getting a rebound after a missed shot.
+- The timeline of a rebound is dependant on positioning, hustle, and conversion of opportunities.
+- The key to positioning is based on the real estate occupied and evaluated based on Voronoi tesselations that put point value to areas of the floor.
+- The Voronoi tesselations can have real estave value based on the likelihood of a rebound ocurring in the area based on the shooting location on the floor (distributions of rebound locations based on shooting zone basic).
+- When looking at crashing, the changing real estate value of the space occupied by a player can indicate the intuition to crashing the boards.
+- In order to properly measure hustle, one can look at rebounding opportunities (closest player to ball once the ball is below 10ft) earned and compare the opportunities against total field goals missed.
+- Conversion can be obtained by dividing the number of rebounds obtained by the number of opportunities had.
+
+#### Strong Points
+- By comparing real estate at time of shot and time the ball hits the rim can introduce bias towards wings and guards that do not occupy expensive real estate at the time of the shot. Even though centers and forwards are more likely to get these offensive rebounds, their crash index would indicate a lack of effort towards crashing, when compared to other players. The authors saw this bias and subtracted the raw regression value from the initial positioning of the player at the time of the shot. This is essential positioning over replacement player that starts in the same region.
+
+
+#### Weak Points
+- There are no real expecations presented in the analysis.
+- The real estate evaluation using Voronoi tesselations should be given a proper definition with an equation.
+
+#### Questions
+- Can you use these three main rebounding factors to predict which player/team gets the rebound?
+- Can Positioning be extended to intuition, where players can be measured on how well an individual predicts the location of the rebound, instead of just driving straight to the net?
+
+#### Future Work
+- The authors should look to determine whether positioning of rebounds is a property of skill or luck.
+- The acutal ability of boxing out a player should be explored at length to see volume of blocking out player and effeciency of the blocking out as it converts to rebounding percentage.
