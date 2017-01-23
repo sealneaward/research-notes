@@ -24,3 +24,5 @@
 - Would introducing batch normalization have the same effect as dropout?
 
 ### [Detecting events and key actors in multi-person videos](https://arxiv.org/pdf/1511.02917v2.pdf)
+
+- [Data](http://basketballattention.appspot.com/)
