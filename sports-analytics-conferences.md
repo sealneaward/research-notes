@@ -1,8 +1,8 @@
 # Sports Analytics Conferences and Workshops that Accept Papers/ Posters
 
-- [MIT Sloan Sports Analytics Conference](www.sloansportsconference.com)
+- [MIT Sloan Sports Analytics Conference](http://www.sloansportsconference.com)
 
-- [KDD Sports Analytics Workshop](www.large-scale-sports-analytics.org/Large-Scale-Sports-Analytics/Home.html)
+- [KDD Sports Analytics Workshop](http://www.large-scale-sports-analytics.org/Large-Scale-Sports-Analytics/Home.html)
 
 - [The Cascadia Symposium on Statistics in Sports](http://www.cascadiasports.com/)
 
