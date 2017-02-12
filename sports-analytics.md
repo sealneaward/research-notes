@@ -110,5 +110,3 @@
 #### Future Work
 - The authors should look to determine whether positioning of rebounds is a property of skill or luck.
 - The acutal ability of boxing out a player should be explored at length to see volume of blocking out player and effeciency of the blocking out as it converts to rebounding percentage.
-
-### [Soccer Field Localization from a Single Image](https://arxiv.org/pdf/1604.02715v1.pdf)
