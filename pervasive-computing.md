@@ -158,3 +158,51 @@ The preference model presented supports the ranking of chouces according to the 
 ### Case Study
 
 - The authors of the paper carried out a case study where they built a context-aware communication tool. The study compared different models to show how well each faired in maintanability, being easy to add new features, and reusability for context definitions and context processing.
+
+# [Providing Contextual Information to Pervasive Computing Applications](http://www.cs.cmu.edu/~aura/docdir/Percom03.pdf)
+
+### General Ideas Taken From Paper
+
+- The authors introduce the Contextual Information Service (CIS). ICS provides applications with contextual information from a virtual database.
+- The CSI provides contextual information around the location of people, the location and properties of printers, the amount of bantwidth available, etc. The information on different devices is provided through Contextual Information Providers that operate within a virtual database.
+- In different scenarios, the effort behind developing context-aware applications is difficult and can render function non-reusable. This is an ineffecient way of development, as many situation that require context would require additional code to be written. A solution to this problem is storing context information inside of a database.
+- The limations to storing raw contextual informamtion in a database is that database are static and require large amounts of cotnext-gathering before hand, Contextual information also has metadata assoaciated with it: accuracy and freshnesss, which cannot be stored in a traditional database correctly.
+- To address the limitations of a traditional database, CIS uses a virtual database. The virtual database provides contexual information through a query interface. The information is stored and managed by a set of ditributed contextual information providers.
+
+### CIS Design Requirements
+
+##### Clients can Easily Synthesize Required Contextual Information
+
+- CIS should provide contextual information while requiring minimal effort from the client. This can be done be allowing clients to retreive information from contextual providers. Ontop of providers access, CIS supports callback functions that reduce the need for polling at the client level.
+
+##### Effecient Information Providers
+
+- Contextual information is usually static, which makes easy storage in a database and easy for provider support.
+- Contextual information can also be dynamic, which cannot be stored in a static database. Dynamic information does not work in a static database. Providers support dynamic information as they compute the results as requests come in, giving up to date contextual information. The information required should be of the lower accuracy, due to the dynamic nature of the information being requested.
+
+##### Dynamic Attributes
+
+- Dynamic information comes at lower certainty than static information. IE/ The location of a person can change (uncertain) where the name of a person does not usually change(certain).
+- To support this information, clients must be able to query the contextual information in a query and the clients must be able to specify attributes of the meta data.
+- The meta data to be supported is:
+
+1. Accuracy
+2. Confidence
+3. Update Time
+4. Sample Interval
+
+### System Architecture
+
+##### Contextual Information Service Architecture
+
+1. Client issues query using the Contextual Service Interface
+2. Queries are composed by the Query Synthesizer and sent to providers
+
+- This approach enables clients to focus on the information that they desire.
+- It also allows contextual information providers to be implemented without sacrificing basic functionality.
+
+##### Contextual Information Provider Classes
+
+- Providing information on the aspects of contextual environment can be done by providing information on entities and relationships that can be grouped into a small number of classes.
+- The entities tracked are: peopel, devices, physical spaces, and networks. The main example of tracking people and paper printers, context providers will need to be created for each.
+- Network classes are used to facilitate communication between applications providers.
