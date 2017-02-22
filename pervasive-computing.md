@@ -77,3 +77,84 @@
 - Events are assumed to have schedules.
 - THere is one main ontology class to represent the scheduled events: PresentationSchedule.
 - The presentation class has proeprties that descrive; start time, end time, presentation title, presentation abstract, etc.
+
+# [Developing Context-Aware Pervasive Computing Applications: Models and Approach](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=C2D753E13FBCB55712C97EED1AACB5FA?doi=10.1.1.59.8031&rep=rep1&type=pdf)
+
+### General Ideas Taken From Paper
+
+- Pervasive systems require ability to operate in highly dynamic environments without intervention by users. Context aware systems aim to meet these requirements by adapting to the current location, time, and user activities.
+
+- There have been many models that have been developed in the research community for context-aware use, but most have not left the lab. This is largely because of the overhead of development cost, concerns about privacy and security, and a misunderstanding of context-awareness.
+
+The paper is divided into two major sections to solve the three problems listed above:
+
+1. Simpifying Design and Implementation Tasks
+2. Rapid Prototyping and Experimentation
+
+### Context Modelling Approach
+
+- Context-aware development has largely been focused on infrastructure development to incorporate that gathering, managing, and interpreting context information. Current measures encourage reusability of functionality and simplification of application development, which can lead to too much abstraction for context descriptions.
+
+##### Characteristics of Context Information
+
+- Previous context models oonly derived information from sensors. The model proposed takes information from sensors, static information, and user-supply side. The model then determines which information is the most pertanent to the situation at hand.
+
+- Different information sources have different degress of reliability. Information from sensors is very dynamic and can contain lots of noise, where user supplied information is very reliable, but can become outdated.
+
+##### Graphical Modelling Approach
+
+- The Context Modelling Language is developed as a tool to assist designers when exploring and specifying context requirements.
+-  Provides modelling constructs for truth of information, the different classification and the information, useful metadata, and dependences among different information types.
+- CML was formed as an extension to Object-Role modelling (ORM)
+- ORM was used as a base line for construction of CML becase of the formalities and the closeness to the modelling approach.
+
+CML Captures:
+
+1. User activities that covers past, present, and future activities.
+2. Associations between users and communications device.
+3. Locations of users and devices.
+
+###### Relational Representation
+
+- Relational mapping creates a representation of CML fact types that help with context management tasks: enforcement of constraints, storage within a database, amd querying the applications.
+- The relational mapping can be represented in a database.
+
+###### Situation Asbtraction
+
+- The graphical model notation works when specifying the context infromation used by a context-awar application, and its relational mapping stored context, but neither serve as an abstraction for programming.
+- Situation abstraction is a way to define conditions of the context in terms of the fact abstraction.
+- Situations can be combined, promoting reuse and incremental combinations by the programmer.
+
+### Preference Model
+
+- Tools are used to to support the decision making proceess involved in mapping the context to application behaviours.
+- Explicit means to represent user preferecnce is required in context modelling.
+The preference model presented supports the ranking of chouces according to the context. Communication application allows the choices to be the communication channels that are used by people to talk to each other.
+- Each preference task the form of a pair consisting of a scope and a scoring function. The score represents a choice to be made.
+- Preferences can be grouped into sets and be combined according to policies.
+
+### Programming models
+
+- Context aware programming has been developed using traditional methods where the context logic is often hard coded into the system. The source code must be edited to support additional behaviours and contexts.
+
+###### Branching
+
+- The branching model is designed to assist in decision problems involved in a context-dependent choive among a set of alternatives. In information retrieval, branching can be sued to select relevant information to present to the user, as well as the most suitable form of presentation. This approach results in the tight binding of the context model to the application logic, making it harder to evolve.
+-  To solve this problem, the preference model is leveraged. User preferences act as the link between the context and the preferred action. Preferences assign ratings to the alternatices according to the context.
+
+
+###### Triggering
+
+- A trigger mechanism is employed to support actions that are invoked due to context changes. These context changes are listed as true, false, and possibly true. Triggers are associated with changes of context state.
+
+### Software Infrastructure
+
+- The infrastructure of context-aware systems are comprised of loosely coupled layers. The context-gathering layer aquires context from sensors and process the information to create a level of abstraction for the context management system. To connect to the management system, there exists a content-based routing mechanism.
+- The context management layer maintains a set of context models in terms of the their relationship representations.
+- There exists a query layer to provide applications access to the context management system.
+- The adaptation layer manages repositories of situations, as well as trigger and preference definitions.
+- The application layer provides tookit support for the programming models.
+
+### Case Study
+
+- The authors of the paper carried out a case study where they built a context-aware communication tool. The study compared different models to show how well each faired in maintanability, being easy to add new features, and reusability for context definitions and context processing.
