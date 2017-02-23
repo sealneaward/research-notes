@@ -206,3 +206,22 @@ The preference model presented supports the ranking of chouces according to the 
 - Providing information on the aspects of contextual environment can be done by providing information on entities and relationships that can be grouped into a small number of classes.
 - The entities tracked are: peopel, devices, physical spaces, and networks. The main example of tracking people and paper printers, context providers will need to be created for each.
 - Network classes are used to facilitate communication between applications providers.
+
+### Contextual Service Interface Functions
+
+- The primary function that is supported by the Contextual Service Interface si the query function. A query that is executed typically contains attributes selected, attribute requirements, and the names of the context providers.
+
+### Service Interface Implementation
+
+##### Communication
+- The communication done between channels is encoded in XML and transported over HTTP. Over the channels communication, query requests can be made between clients and providers. This enables SQL communication, but without the overhead of implementing a database.
+
+### Contextual Information Prototype
+
+##### Context Synthesizer
+
+- Synthesizer accepts queries from the clients, decomposes them, and then creates requests for the Contextual Information Providers
+
+##### Dynamic Contextual Information Providers
+
+- Meta data is used by providers to determine exactly what information is requested by users.
