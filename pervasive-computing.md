@@ -97,7 +97,7 @@ The paper is divided into two major sections to solve the three problems listed 
 
 ##### Characteristics of Context Information
 
-- Previous context models oonly derived information from sensors. The model proposed takes information from sensors, static information, and user-supply side. The model then determines which information is the most pertanent to the situation at hand.
+- Previous context models only derived information from sensors. The model proposed takes information from sensors, static information, and user-supply side. The model then determines which information is the most pertanent to the situation at hand.
 
 - Different information sources have different degress of reliability. Information from sensors is very dynamic and can contain lots of noise, where user supplied information is very reliable, but can become outdated.
 
@@ -139,7 +139,7 @@ The preference model presented supports the ranking of chouces according to the 
 
 ###### Branching
 
-- The branching model is designed to assist in decision problems involved in a context-dependent choive among a set of alternatives. In information retrieval, branching can be sued to select relevant information to present to the user, as well as the most suitable form of presentation. This approach results in the tight binding of the context model to the application logic, making it harder to evolve.
+- The branching model is designed to assist in decision problems involved in a context-dependent choive among a set of alternatives. In information retrieval, branching can be sued to select relevant information to present to the user, as 0well as the most suitable form of presentation. This approach results in the tight binding of the context model to the application logic, making it harder to evolve.
 -  To solve this problem, the preference model is leveraged. User preferences act as the link between the context and the preferred action. Preferences assign ratings to the alternatices according to the context.
 
 

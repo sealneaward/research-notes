@@ -110,3 +110,57 @@
 #### Future Work
 - The authors should look to determine whether positioning of rebounds is a property of skill or luck.
 - The acutal ability of boxing out a player should be explored at length to see volume of blocking out player and effeciency of the blocking out as it converts to rebounding percentage.
+
+### [Predicting Shot Making in Basketball using Convolutional Neural Networks Learnt from Adversarial Multiagent Trajectories](https://arxiv.org/pdf/1609.04849.pdf)
+
+#### Problem Statement
+- Predicting whether a shot goes in has many deep dependancies that rely on several spacial features.
+- Hand crafting features for predicting shot success can be somewhat tasking, and important features in floor spacing can be ignored.
+- To best represent the various spacial dependancies of shot success, visualizations can be made of the possession to predict from.
+
+#### Short Summary
+- Using player trajectories, a convolutional neural network can be applied to predict shot success over a section of a possession.
+By combining features engineered that cannot be represented in the visualizations, the authors combine a conv net and a feed forward network to get the best results
+
+#### Strong Points
+- Instead of using player defined positions (PG, SG, etc) player channels are representative of their roles. To determnie roles, they use a representation based on player ineractions within temporal space.
+- The authors showed how important the 11 channel trajectories were by comparing the CNN with three different channel 'options' (Grey, RGB, 11 channel).
+- Multiple models were compared to show the improvements of the combined CNN and FNN had over the baseline.
+- Using heat maps, the authors show the areas of the court that the model sees as high accuracy shots (close to the basket). Heat maps are provided for the 5 roles.
+- By visualizing the filters, the authors show how different filters look for combinations of offensive, defensive, and ball positioning.
+
+#### Weak Points
+- No distribution of shots made vs shots missed is presented
+- The role determining is extremely brief and does not give detail into how these roles were determined.
+
+#### Questions
+- Would introducing [Real Estate](http://www.sloansportsconference.com/wp-content/uploads/2016/02/1556-NBA-Court-Realty.pdf) as a feature of size into the trajectories improve the accuracy?
+- Instead of 11 channels as a fixed size, can you use varying channel sizes based on player embeddings? Not all players will be distinct in their roles (ie multiple corner three shooters)
+- Would only having player roles for offense have any effect on the accuracy vs having 5 roles for defense defined as well?
+
+#### Future Work
+- Combine Jackson Wang's work (sequence detection using RNN's) and the fully connected layer of the CNN over 'slices' of the possession to get better accuracy.
+
+### [Applying Deep Learning to Basketball Trajectories](https://arxiv.org/pdf/1608.03793.pdf)
+
+#### Problem Statement
+- Using deep learning methods, can shot predicting accuracies be improved?
+- Does sequential learning out perform static machine learning methods?
+
+#### Short Summary
+- By using only the trajectory of a ball, shot success from the three point line can be determined.
+- Using the X,Y,Z and game clock data, trajectories can be learnt from and used to predict shot success.
+
+#### Strong Points
+- The authors compared several baseline linear models to show the improvements made by using RNN's
+- Instead of just measuring accuracy at the shot, the authors compare the accuracy at different distance 'steps' in a shot.
+
+#### Weak Points
+- The mention of mixed density networks is very brief and the authors do not explain how MDN's contribute to predicting shot success.
+- Most of the shots are take beyond 8ft, yet there are no accuracy numbers for the distances of the actual shot (all shots are taken 22ft+).
+
+#### Questions
+- Why is only three point shots considered? Does this approach not work for mid-range shots, etc?
+
+#### Future Work
+- Look at varying sequence lengths to find the optimal length for accuracy.
