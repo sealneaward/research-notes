@@ -160,7 +160,9 @@ By combining features engineered that cannot be represented in the visualization
 - Most of the shots are take beyond 8ft, yet there are no accuracy numbers for the distances of the actual shot (all shots are taken 22ft+).
 
 #### Questions
-- Why is only three point shots considered? Does this approach not work for mid-range shots, etc?
+- Why are only three point shots considered? Does this approach not work for mid-range shots, etc?
 
 #### Future Work
 - Look at varying sequence lengths to find the optimal length for accuracy.
+
+# [Representing and Discovering Adversarial Team Behaviors using Player Roles](http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Lucey_Representing_and_Discovering_2013_CVPR_paper.pdf)
