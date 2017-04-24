@@ -36,18 +36,6 @@
 - Using attention based modeling, events can be tracked as points of attention, which can be used by a seperate RNN to classify events based on their attention formations.
 - The model can identify which players are responsible for the event that is identified.
 
-#### Strong Points
--
-
-#### Weak Points
--
-
-#### Questions
--
-
-#### Future Work
--
-
 ### [Soccer Field Localization from a Single Image](https://arxiv.org/pdf/1604.02715v1.pdf)
 
 #### Problem Statement
@@ -78,3 +66,31 @@
 
 #### Future Work
 - Look to provide projection information of moving objects (players) to get a full description of the movement in game.
+
+
+### [Auto-Encoding Variational Bayes](https://arxiv.org/pdf/1312.6114.pdf)
+#### Problem Statement
+- How can we perform efficient approximate inference and learning with directed probabilistic models whose continuous latent variables and/or parameters have intractable posterior distributions?
+- Using Stochastic Gradient Ascent, the paper can yield an unbiased estimator of a posterior distribution from a random initial encoded sample using a variational approximator.
+
+#### Short Summary
+- By using auto-encoding in a neural network, parameters for a recognition model can be maximized for generating a posterior distribution.  As the variational parameters learn, so do the generative parameters in order to create more realistic post distributions.
+- Given a sample variable `x`, a condensed representation is formed as an encoding `z`. The encoding is formed from a distribution of possible codes that are most likely to recreate the initial sample of `x`. From the condensed representation, an approximate posterior distribution is formed and copmared to the true distribution.
+- Minibatches are used for training and updating parameters of the variational and the generative models.
+
+
+#### Strong Points
+- Because the KL divergence between the approximate and the true posterior distributions can never be negative, lower bounds are formed from both variational and generative model parameters.
+- The reconstruction error from the encoding is approximated through training in minibatches.
+- Based on the KL divergence, the variational parameters can be regularized to ensure that the approximate distribution is as close as possible to the ground truth.
+- Neural networks can be easily applied to create coded representations and adversarial posterior distributions, where Gaussian distribution parameters can be updated through an optimization process of computing gradients of the lower bound estimator.
+- The VAE is compared to the wake-sleep distribution approximation methods.
+
+#### Weak Points
+- The authors did not explain why there was such a huge improvement when comparing the VAE with the Wake-Sleep methods for the Frey Face dataset.
+
+#### Questions
+- Why is there such an improvement for VAE with Frey Face, but not MNIST?
+
+#### Future Work
+- Revisit the comparisons with newer generative models, such as GANs.
