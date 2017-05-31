@@ -18,6 +18,8 @@
 
 - [California SAC](http://www.analyticsinsport.com/usa/)
 
+- [Machine Learning and Data Mining for Sports Analytics](https://dtai.cs.kuleuven.be/events/MLSA17/index.php)
+
 # Journals
 
 - [Journal of Quantitative Analysis in Sports](https://www.degruyter.com/view/j/jqas)
