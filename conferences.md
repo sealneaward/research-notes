@@ -27,5 +27,5 @@
 - [International Journal of Performance Analysis of Sport](http://www.cardiffmet.ac.uk/schoolofsport/enterprise/cpa/Pages/ElJPAS.aspx)
 
 - [Journal of Sports Economics](http://journals.sagepub.com/home/jse)
-
- -[Journal of the International Sports Engineering Association](http://www.springer.com/engineering/mechanics/journal/12283)
+ 
+- [Journal of the International Sports Engineering Association](http://www.springer.com/engineering/mechanics/journal/12283)
