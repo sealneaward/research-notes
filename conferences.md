@@ -10,15 +10,13 @@
 
 - [Great Lakes Analytics in Sports Conference](https://www.uwsp.edu/cols/Pages/GLASC/analyticsconference.aspx)
 
-- [Escape Sports Analytics Conference](http://the-escape.org/)
-
 - [New England Symposium on Statistics in Sports](http://www.nessis.org/)
 
 - [SportCon Sports Analytics Conference](http://minneanalytics.org/sportcon/)
 
-- [California SAC](http://www.analyticsinsport.com/usa/)
-
 - [Machine Learning and Data Mining for Sports Analytics](https://dtai.cs.kuleuven.be/events/MLSA17/index.php)
+
+- [International Conference on Sports Engineering](http://www.bits-pilani.ac.in/icse2017/callforpapers.html)
 
 # Journals
 
@@ -33,3 +31,5 @@
 - [Journal of Sports Sciences](http://www.edmgr.com/rjsp/default.aspx)
 
 - [International Journal of Computer Science in Sport](http://www.iacss.org/index.php?id=30)
+
+- [Journal of the International Sports Engineering Association](http://www.springer.com/engineering/mechanics/journal/12283)
