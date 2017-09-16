@@ -29,3 +29,7 @@
 - [International Journal of Performance Analysis of Sport](http://www.cardiffmet.ac.uk/schoolofsport/enterprise/cpa/Pages/ElJPAS.aspx)
 
 - [Journal of Sports Economics](http://journals.sagepub.com/home/jse)
+
+- [Journal of Sports Sciences](http://www.edmgr.com/rjsp/default.aspx)
+
+- [International Journal of Computer Science in Sport](http://www.iacss.org/index.php?id=30)
