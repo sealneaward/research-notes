@@ -94,3 +94,30 @@
 
 #### Future Work
 - Revisit the comparisons with newer generative models, such as GANs.
+
+
+### [Trajectory Clustering via Deep Representation Learning](http://chaozhang.org/files/papers/ijcnn17.pdf)
+#### Problem Statement
+- Current methods for trajectory clustering often rely on comparison metrics that are used for distance based clustering models.
+- They do not rely on space and time when comparing trajectories.
+- The methods proposed allow for time and space consideration.
+
+#### Short Summary
+- In the proposed methods, a sliding window approach is used to extract a set of behaviour features sampled from movement descriptions.
+- The windows are used as sequence input for a seq2seq encoding problem.
+- From training a seq2seq model, the model tries to reconstruct the behaviour descriptions used as input.
+- The learnt embeddings are then used as input to standard clustering algorithms like k-means.
+
+#### Strong Points
+- The paper provides a simple architecture, but very strong and innovative approach to an old problem using seq2seq embedding.
+- Instead of having gigantic inputs sequences, behaviour features(like speed, rate of turn) at each window is extracted.
+
+#### Weak Points
+- It might be interesting to see what exactly the results would look like in a pure unsupervised setting as well as comparing the clustering results with true labels.
+
+#### Questions
+- How many different setups of the seq2seq model did you use?
+- Would attention based seq2seq modelling show any improvement.
+
+#### Future Work
+- Would be intersting to see another comparison with the Bezier curve method explored in Bornne's work in 2017.
